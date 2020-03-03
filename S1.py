@@ -355,7 +355,7 @@ for p in range(nPatterns - 1):
         my_file2 = open("权值.dat", "a")
         for j in range(nInputNodes):
             # my_file2 << i << " " << j << " " << w1[i][j] << "\n"
-            my_file2.write(w1[i][j])
+            my_file2.write(str(w1[i][j]))
 
         my_file2.close()
 
@@ -364,7 +364,7 @@ for p in range(nPatterns - 1):
         my_file2 = open("权值.dat", "a")
         for j in range(nHiddenNodes):
             # my_file2 << i + " " + j + " " + w2[i][j] + "\n"
-            my_file2.write(w2[i][j])
+            my_file2.write(str(w2[i][j]))
 
         my_file2.close()
 
