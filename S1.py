@@ -1,6 +1,7 @@
 import numpy as np
 from numpy import sqrt, exp
 import random
+from time import perf_counter
 
 scaleValue = 32767
 InputNo = 3
@@ -10,7 +11,7 @@ ErrorLevelValue = 0.005  # 满意的误差水平
 wmaxValue = 0.1
 
 HiddenNo = 10
-IterationsNo = 1000000
+IterationsNo = 50000
 etaValue = 0.1  # 默认的学习速率
 alphaValue = 0.1  # 默认的势态因子
 
@@ -211,6 +212,10 @@ for i in range(nOutputNodes - 1):
 # 开始迭代循环
 print("正在计算......")
 for qq in range(nIterations):
+    t1_start = perf_counter()
+    if qq % 1000 == 0 and qq > 0:
+        t1_stop = perf_counter()
+        print('epoch ' + str(qq) + ' time: ' + str(t1_start - t1_stop))
     for p in range(nPatterns - 1):
         # 隐含层的输出值
         for h in range(nHiddenNodes - 1):
