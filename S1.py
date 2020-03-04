@@ -1,3 +1,10 @@
+"""
+    注意：
+        该程序只是原始S1期鼓风预测程序的翻译。
+        为了更容易实现，使用了numpy库。
+        通过使用numpy的内置函数对矩阵进行运算，可以改进算法。
+"""
+
 import numpy as np
 from numpy import sqrt, exp
 import random

@@ -1,3 +1,12 @@
+"""
+    注意：此算法从两个文件（“ input_data”，“ target_data”）获取训练数据，
+    其中要预测的字段存储在第二个文件（“ target_data”）中
+    它没有规范化或将训练有素的网络用于预测。
+    它仅复制示例（BP.cpp）中算法的训练部分
+    它也只使用python的标准库
+"""
+
+
 from math import exp
 from random import seed
 from random import random
